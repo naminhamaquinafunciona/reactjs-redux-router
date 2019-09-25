@@ -1,16 +1,18 @@
-
-
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Index from '../pages/App'
-import About from '../pages/About'
+import { Provider } from "react-redux";
+import store from "../store";
+import Index from "../pages/App";
+import About from "../containers/about";
 
 function AppRouter() {
   return (
-    <Router>
+    <Provider store={store}>
+      <Router>
         <Route path="/" exact component={Index} />
         <Route path="/sobre" exact component={About} />
-    </Router>
+      </Router>
+    </Provider>
   );
 }
 
