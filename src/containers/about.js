@@ -1,6 +1,7 @@
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import About from "../pages/About";
+import { updateUserName } from "../actions/user"
 
 const mapStateToProps = state => {
   return {
@@ -9,7 +10,11 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return {};
+  return {
+    updateUserName: data => {
+      dispatch(updateUserName(data));
+    },
+  };
 };
 
 export default withRouter(
