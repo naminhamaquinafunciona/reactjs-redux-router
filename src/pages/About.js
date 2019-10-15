@@ -35,7 +35,7 @@ class About extends React.Component {
             <h1>Mudar nome do usuário</h1>
             <div>
               <input type="text" placeholder="digite o novo usuário" onChange={this.changeUserName} value={this.state.userName}></input>
-              <Button type="button" handleChangeName={this.handleChangeName} text="Mudar nome"/>
+              <Button type="button" handleChangeName={this.handleChangeName} text={123} />
             </div>
           </div>
         </Header>
